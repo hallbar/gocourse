@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {{range .}}
+      <h2>{{.Name}}</h2>
+      <h3>{{range .Menu}}</h3>
+        <h4>{{.Meal}}</h4>
+        {{range .Items}}
+          {{.Name}}<br>
+          ${{.Price}}<br>
+          {{.Description}}<br>
+          <hr>
+        {{end}}
+      {{end}}
+    {{end}}
+  </body>
+</html>
